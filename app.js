@@ -4,6 +4,7 @@ const port = 3000;
 const tasks = require("./routes/tasks");
 const connectDB = require("./db/connect");
 app.use(express.json());
+app.use(express.static("./public"));
 require("dotenv").config();
 
 app.use("/api/v1/tasks", tasks);
